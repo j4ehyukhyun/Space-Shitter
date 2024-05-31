@@ -1,0 +1,64 @@
+<!--
+    --------------------------------------------------------------
+    © 2024 Space Shitter
+    Author: Jack Hyun
+    All rights reserved.
+    --------------------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Shitter</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();   
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="old-screen">
+
+        <div class="scanline"></div>
+        <div id="game-container">
+            <div id="score-display">Score: 0</div>
+            <div id="level-display">Level: 1</div>
+            <div id="health-display">HP: 3</div>
+            <div id="countdown-display">Next Level In: 20s</div>
+            <div id="spaceship"></div>
+            <h1 class="game-title">Space shitter</h1>
+            <p class="game-subtitle"><em>"HARDCORE SPACE SHOOTER"</em></p>
+            <a href="action/index.html" class="button-link">-START GAME-</a>  
+            <p class="game-control1"><em>"a""d": Move</em></p>
+            <p class="game-control2"><em>" ": Shoot</em></p>
+     
+            
+        </div>
+       
+        <footer>
+            <div class="footer-content">
+                <span class="copyright">&copy; 2024 Jack Hyun. All Rights Reserved.</span>
+                <span class="version">v1.00.0</span>
+
+            </div>
+        </footer>
+        
+        
+    </div>
+
+    
+
+    
+ 
+    <script src="script.js"></script>
+</body>
+</html>

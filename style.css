@@ -1,0 +1,256 @@
+/*
+ * --------------------------------------------------------------
+ * © 2024 Space Shitter
+ * Author: Jack Hyun
+ * All rights reserved.
+ * --------------------------------------------------------------
+ */
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "press Start 2P";
+}
+
+ .old-screen {
+
+  position: relative;
+  text-align: center;
+  filter: contrast(1.2);
+  background-size: 100% 6px;
+  padding: 20px;
+}
+
+#game-container {
+
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 2px solid white;
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(rgb(28, 54, 28) 50%, rgba(18, 45, 18) 50%);
+  background-size: 100% 6px;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  color: rgb(143, 194, 238);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  top: 52%; 
+  transform: translate(-55%, -50%);
+  z-index: 11;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 0.4;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.button-link:hover {
+  color: #fff;
+  background-color: transparent; 
+  box-shadow: inset 300px 0 0 0 #54b3d6;
+}
+
+
+.game-subtitle {
+  color: #D0E9F5;
+  font-size: 15px;  
+  position: absolute;
+  top: 42.5%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+  opacity: 0.8;
+  white-space: nowrap;  
+}
+
+.game-control1 {
+  color: #D0E9F5;
+  font-size: 15px;
+  position: absolute;
+  top: 58%;  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+  white-space: nowrap; 
+}
+
+.game-control2 {
+  color: #D0E9F5;
+  font-size: 15px;  
+  position: absolute;
+  top: 63%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+  white-space: nowrap; 
+}
+
+.game-title {
+  font-family: "press Start 2P";
+  color: white;
+  font-size: 48px; 
+  text-transform: uppercase;  
+  position: absolute;
+  top: 22%;  
+  left: 50%;
+  transform: translateX(-50%);  
+  z-index: 10;
+}
+
+
+#level-display, #health-display, #countdown-display {
+  position: absolute;
+  top: 10px;
+  color: white;
+  font-size: 14px;
+
+  z-index: 10;
+}
+
+#level-display {
+  left: 10px;
+}
+
+#health-display {
+  left: 150px;
+}
+
+#countdown-display {
+  right: 10px;
+}
+
+#spaceship {
+  position: absolute;
+  bottom: 10px;
+  left: 375px;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+  z-index: 10; 
+}
+
+
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+.enemy, .advanced-enemy, .tanky-enemy {
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite; 
+}
+
+
+@keyframes moveStars {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 0 100%;
+  }
+}
+
+
+.star {
+  width: 5px;
+  height: 5px;
+  background-color: rgb(255, 255, 255); 
+  position: absolute;
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+footer {
+  width: 100%;
+  bottom: -20px; 
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+  font-size: 12px; 
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  margin-top: 10px;
+  margin-bottom: -10px;
+  
+}
+
+.footer-content .version {
+  order: 1; 
+}
+
+.footer-content .copyright {
+  order: 2; 
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  width: 30%;
+  height: 30%; 
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 100; 
+  text-align: center; 
+  transform: translate(-50%, -50%); 
+}
+
+#game-over-screen button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#game-over-screen button:hover {
+  background-color: darkgreen;
+}
+
+#score-display {
+  position: absolute;
+  top: 42px; 
+  left: 10px; 
+  color: white;
+  font-size: 14px;
+
+  z-index: 10;
+}
+
+
+
