@@ -6,7 +6,7 @@
  * --------------------------------------------------------------
  */
 
-body {
+ body {
   margin: 0;
   overflow: hidden;
   background-color: black;
@@ -28,7 +28,6 @@ body {
 }
 
 #game-container {
-
   position: relative;
   width: 800px;
   height: 600px;
@@ -47,7 +46,8 @@ body {
   text-decoration: none;
   border: none;
   position: absolute;
-  top: 52%; 
+  top: 55%;  
+  left: 50%;
   transform: translate(-55%, -50%);
   z-index: 11;
   font-size: 22px;
@@ -57,63 +57,119 @@ body {
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.button-link:hover {
-  color: #fff;
-  background-color: transparent; 
-  box-shadow: inset 300px 0 0 0 #54b3d6;
+
+.button-link2 {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  color: rgb(143, 194, 238);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  top: 62%;  
+  left: 50%;
+  transform: translate(-55%, -50%);
+  z-index: 11;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 0.4;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 
+.button-link:hover {
+  color: #fff;
+  background-color: transparent; 
+  box-shadow: inset 300px 0 0 0 #54b3d6; 
+}
+
+
+
+.button-link2:hover {
+  color: #fff;
+  background-color: transparent; 
+  box-shadow: inset 300px 0 0 0 #d65454;
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate(-55%, -50%);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(calc(-55% - 5px), -50%);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(calc(-55% + 5px), -50%);
+  }
+}
+
 .game-subtitle {
-  color: #D0E9F5;
-  font-size: 15px;  
+  color: white;
+  font-size: 30px;  
   position: absolute;
-  top: 42.5%; 
+  top: 16%; 
+  left: 28%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+  white-space: nowrap; 
+}
+
+.game-subtitle2 {
+  color: #D0E9F5;
+  font-size: 20px;
+  position: absolute;
+  top: 43.5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   text-transform: uppercase;
+  opacity: 0.8;
+  white-space: nowrap; 
+}
+
+
+.game-control1 {
+  color: #d0e9f580;
+  font-size: 13px; 
+  position: absolute;
+  top: 68%;  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+
   opacity: 0.8;
   white-space: nowrap;  
 }
 
-.game-control1 {
-  color: #D0E9F5;
-  font-size: 15px;
-  position: absolute;
-  top: 58%;  
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  text-transform: uppercase;
-
-  opacity: 0.8;
-  white-space: nowrap; 
-}
-
 .game-control2 {
-  color: #D0E9F5;
-  font-size: 15px;  
+  color: #d0e9f580;
+  font-size: 13px;  
   position: absolute;
-  top: 63%; 
+  top: 72%;  
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   text-transform: uppercase;
 
   opacity: 0.8;
-  white-space: nowrap; 
+  white-space: nowrap;   
 }
 
 .game-title {
   font-family: "press Start 2P";
   color: white;
-  font-size: 48px; 
+  font-size: 60px;  
   text-transform: uppercase;  
   position: absolute;
-  top: 22%;  
+  top: 19%;  
   left: 50%;
-  transform: translateX(-50%);  
+  transform: translateX(-50%); 
   z-index: 10;
 }
 
@@ -151,8 +207,7 @@ body {
 }
 
 
-
-@keyframes spin {
+ @keyframes spin {
   from {
       transform: rotate(0deg);
   }
@@ -162,13 +217,13 @@ body {
 }
 
 
-.enemy, .advanced-enemy, .tanky-enemy {
-  animation-timing-function: linear; 
-  animation-iteration-count: infinite; 
+ .enemy, .advanced-enemy, .tanky-enemy {
+  animation-timing-function: linear;  
+  animation-iteration-count: infinite;  
 }
 
 
-@keyframes moveStars {
+ @keyframes moveStars {
   0% {
       background-position: 0 0;
   }
@@ -177,7 +232,7 @@ body {
   }
 }
 
-
+ 
 .star {
   width: 5px;
   height: 5px;
@@ -185,48 +240,49 @@ body {
   position: absolute;
   opacity: 0.5;
   border-radius: 50%;
-  z-index: 3;
+  z-index: 3; 
 }
 
 footer {
-  width: 100%;
+  width: 100%;  
   bottom: -20px; 
   text-align: center;
   color: white;
   opacity: 0.5;
-  font-size: 12px; 
+  font-size: 12px;  
 
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;  
   margin-top: 10px;
   margin-bottom: -10px;
   
 }
 
+ 
 .footer-content .version {
   order: 1; 
 }
 
 .footer-content .copyright {
-  order: 2; 
+  order: 2;  
 }
 
 #game-over-screen {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
-  width: 30%;
-  height: 30%; 
-  display: none; 
+  top: 50%;   
+  left: 50%;  
+  width: 30%;  
+  height: 30%;  
+  display: none;  
   justify-content: center;
   align-items: center;
-  z-index: 100; 
-  text-align: center; 
-  transform: translate(-50%, -50%); 
+  z-index: 100;  
+  text-align: center;  
+  transform: translate(-50%, -50%);  
 }
 
 #game-over-screen button {

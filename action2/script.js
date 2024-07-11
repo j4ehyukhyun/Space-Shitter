@@ -16,7 +16,7 @@ let bullets = [];
 let enemies = [];
 let movement = { left: false, right: false, shooting: false };
 let bulletCooldown = false; 
-let enemySpeed = 3.5, tankySpeed = 1, advancedSpeed = 2, bossSpeed = 0.1, horizontalSpeed = 2, homingEnemySpeed = 1;
+let enemySpeed = 6, tankySpeed = 2, advancedSpeed = 4, bossSpeed = 0.4, horizontalSpeed = 2, homingEnemySpeed = 1;
 let level = 1;
 let countdown = 20; 
 let playerHP = 3; 
@@ -538,14 +538,34 @@ function startEnemySpawning() {
         if (level >= 1 && level != 5  && level != 10) {
             spawnEnemy();
             spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
         }
         if (level >= 2 && level != 5 && level != 6 && level != 10) {
             spawnTankyEnemy();
+            spawnTankyEnemy();
+            spawnTankyEnemy();
+            spawnTankyEnemy();
+
         }
         if (level >= 3 && level != 5 && level != 10 && level != 6) {
             spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+
         }
         if (level >= 4 && level != 5 && level != 6 && level != 10) {
+            spawnEnemy();
+            spawnAdvancedEnemy();
+            spawnEnemy();
+            spawnAdvancedEnemy();
+            spawnEnemy();
+            spawnAdvancedEnemy();
             spawnEnemy();
             spawnAdvancedEnemy();
         }
@@ -553,21 +573,47 @@ function startEnemySpawning() {
             spawnBossEnemy();
             spawnEnemy();
             spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
         }
         if (level >= 6 && level != 10) {
             spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+
         }
         if (level >= 7 && level != 10) {
             spawnTankyEnemy();
+            spawnTankyEnemy();
+            spawnTankyEnemy();
+            spawnTankyEnemy();
+
         }
         if (level >= 8 && level != 10) {
             spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+            spawnEnemy();
+
         }
         if (level >= 9 && level != 10) {
             spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+
         }
         if (level == 10 ) {
             spawnBoss2Enemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
+            spawnAdvancedEnemy();
         }
     }, 1000);
 }
