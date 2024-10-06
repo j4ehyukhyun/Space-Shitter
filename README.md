@@ -11,7 +11,7 @@ Welcome to **Space Shitter**, an exciting game where you navigate through the ga
 
 ## How to Play
 
-1. **Start the Game:** Click [here](https://j4ckofall.github.io/Space-Shitter/) to play the game directly in your browser.
+1. **Start the Game:** Click [here](https://j4ehyukhyun.github.io/Space-Shitter/) to play the game directly in your browser.
 2. **Controls:** Use the arrow keys or AD to control your spaceship and Spacebar to shoot bullets.
 3. **Avoid Obstacles:** Dodge & Kill enemies and other hazards to stay alive.
 5. **Score Scores:** Kill as many enemies and collect scores to achieve a high score.
